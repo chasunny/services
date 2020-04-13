@@ -41,20 +41,20 @@ public class MainController {
 	
 	
 	
-	@Autowired
-	private KafkaTemplate<String, String> kafkaTemplate;
+//	@Autowired
+//	private KafkaTemplate<String, String> kafkaTemplate;
 	
 	List<Restaurant> temp=new ArrayList<Restaurant>();
 	
 	private static final String TOPIC ="order_service";
 	
 	//kafka
-	@GetMapping("/greeting/{message}")
-	public String post(@PathVariable("message") String message) {
-		kafkaTemplate.send(TOPIC, message);
-		return "Published successfully";
-	}
-	
+//	@GetMapping("/greeting/{message}")
+//	public String post(@PathVariable("message") String message) {
+//		kafkaTemplate.send(TOPIC, message);
+//		return "Published successfully";
+//	}
+//	
 	
 	//fallback method for hystrix no restaurants
 //	  public List<Restaurant> fallbackgetByDist(int dist){
