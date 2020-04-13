@@ -4,26 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
-import javax.swing.Spring;
+
 import javax.transaction.Transactional;
 
-import org.apache.http.HttpStatus;
-import org.junit.runner.RunWith;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Modifying;
-import org.springframework.http.ResponseEntity;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 import com.order.my.food.feignproxy.FoodProxy;
 import com.order.my.food.model.DeliveryBoy;
-import com.order.my.food.model.FoodMenu;
+
 import com.order.my.food.model.Restaurant;
-import com.order.my.food.repository.RepoImplementation;
+
 import com.order.my.food.service.RestServices;
 
 @RestController 
